@@ -63,7 +63,7 @@ Pandora’s Cluster, a cosmic tapestry woven from galaxy collisions, gravitation
   return (
     <div className="app-container">
       <video autoPlay muted loop className="background-video">
-        <source src="src/assets/Videos_trimmed.mp4" type="video/mp4" />
+        <source src="/Videos_trimmed.mp4" type="video/mp4" />
       </video>
 
       <a href="https://your-home-page-link.com" className="back-to-home">
