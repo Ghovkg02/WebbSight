@@ -1,0 +1,125 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background-video::-webkit-media-controls {
+  display: none;
+}
+
+.invisible-button {
+  position: absolute;
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.invisible-button:hover {
+  box-shadow: 0 0 15px gold;
+}
+
+.video-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+video {
+  width: 80%; /* Adjusted size */
+  height: auto;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 12;
+}
+
+.toggle-description {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: gold;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  z-index: 11;
+}
+
+.description-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Glass effect */
+  backdrop-filter: blur(10px); /* Smooth blur effect */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+  z-index: 12;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.description-box.open {
+  display: block;
+}
+/* Styling for Back to Home button */
+.back-to-home {
+  position: absolute;
+  top: 10px;         /* Aligns button at the top */
+  left: 1300px;        /* Aligns button at the left */
+  padding: 10px 20px;
+  background-color: #3498db;   /* Light blue color */
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-home:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  background-color: #2980b9;   /* Darker blue on hover */
+}
